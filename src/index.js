@@ -26,7 +26,7 @@ import "assets/scss/black-dashboard-react.scss";
 import "assets/demo/demo.css";
 import "assets/css/nucleo-icons.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// test
+
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
@@ -35,4 +35,4 @@ ReactDOM.render(
         </Switch>
     </BrowserRouter>,
     document.getElementById("root")
-  );
+);

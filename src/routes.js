@@ -17,16 +17,16 @@
 */
 import Dashboard from "views/Dashboard.js";
 import Icons from "views/Icons.js";
-import Map from "views/Map.js";
 import Notifications from "views/Notifications.js";
 import TableList from "views/TableList.js";
 import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
+import Resources from "views/Resources.js";
 
 var routes = [
   {
     path: "/dashboard",
-    name: "Dashboard test",
+    name: "Dashboard",
     icon: "tim-icons icon-chart-pie-36",
     component: Dashboard,
     layout: "/admin",
@@ -36,13 +36,6 @@ var routes = [
     name: "Icons",
     icon: "tim-icons icon-atom",
     component: Icons,
-    layout: "/admin",
-  },
-  {
-    path: "/map",
-    name: "Map",
-    icon: "tim-icons icon-pin",
-    component: Map,
     layout: "/admin",
   },
   {
@@ -71,6 +64,13 @@ var routes = [
     name: "Typography",
     icon: "tim-icons icon-align-center",
     component: Typography,
+    layout: "/admin",
+  },
+  {
+    path: "/resources",
+    name: "Resources",
+    icon: "tim-icons icon-align-center",
+    component: Resources,
     layout: "/admin",
   },
 ];

@@ -103,6 +103,41 @@ function Sidebar(props) {
       );
     }
   }
+  return (
+        <div className="sidebar">
+          <div className="sidebar-wrapper" ref={sidebarRef}>
+            {logoImg !== null || logoText !== null ? (
+              <div className="logo">
+                {logoImg}
+                {logoText}
+              </div>
+            ) : null}
+            <Nav>
+              {routes.map((prop, key) => {
+                if (prop.redirect) return null;
+                return (
+                  <li
+                    className={
+                      activeRoute(prop.path) + (prop.pro ? " active-pro" : "")
+                    }
+                    key={key}
+                  >
+                    <NavLink
+                      to={prop.layout + prop.path}
+                      className="nav-link"
+                      activeClassName="active"
+                      onClick={props.toggleSidebar}
+                    >
+                      <i className={prop.icon} />
+                      <p>{rtlActive ? prop.rtlName : prop.name}</p>
+                    </NavLink>
+                  </li>
+                );
+              })}
+            </Nav>
+          </div>
+        </div>
+      )
 }
 
 Sidebar.defaultProps = {
